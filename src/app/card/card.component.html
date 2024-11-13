@@ -1,0 +1,7 @@
+<div class="card border-dark mb-3 custom-card" style="max-width: 18rem; margin-top: 30px;">
+    <img (click)="clickImage(description)" [src]="image" [alt]="title" class="img-fluid card-img">
+    <h3 class="card-title">{{title | uppercase}}</h3>
+    <button [routerLink]="['/details']" [queryParams]="{id:id}" class="btn btn-outline-primary" *ngIf="available">Voir produits</button>
+    <button [routerLink]="['/details']" class="btn btn-outline-warning" (click)="notif()">Voir détails</button>
+    <span [hidden]="available" class="unavailable-text">Catégorie non disponible</span>
+</div>

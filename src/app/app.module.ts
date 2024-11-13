@@ -11,9 +11,15 @@ import { ProductModule } from './product/product.module';
 import { ContactModule } from './contact/contact.module';
 import { ProfileModule } from './profile/profile.module';
 import { AproposModule } from './apropos/apropos.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainsPipe } from './contains.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { ProductsCategoryComponent } from './products-category/products-category.component';
+import { ProductsCategoryQPComponent } from './products-category-qp/products-category-qp.component';
+import { AddProductReactiveComponent } from './add-product-reactive/add-product-reactive.component';
+import { FormProductComponent } from './form-product/form-product.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,12 @@ import { HighlightDirective } from './highlight.directive';
     ListCategoriesComponent,
     ContainsPipe,
     HighlightDirective,
+    NotFoundPageComponent,
+    ProductsCategoryComponent,
+    ProductsCategoryQPComponent,
+    AddProductReactiveComponent,
+    FormProductComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +44,8 @@ import { HighlightDirective } from './highlight.directive';
     ContactModule,
     ProfileModule,
     AproposModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   
   ],
   providers: [],

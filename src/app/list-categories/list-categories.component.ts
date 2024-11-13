@@ -8,6 +8,7 @@ import { Categorie } from '../models/categorie';
 })
 export class ListCategoriesComponent {
   titre : string = "";
+
   getDescription(description:string){
     alert (description);
   }
@@ -23,6 +24,9 @@ export class ListCategoriesComponent {
   // Propriété pour stocker la recherche de l'utilisateur
   searchTerm: string = '';
 
+  f(msg:any){
+    console.log("btn clicked" + msg.code + " "+ msg.id)
+  }
   // Méthode pour filtrer les catégories
   get filteredCategories() {
     return this.categories.filter(category => 

@@ -15,4 +15,13 @@ import { ProductsComponent } from './products/products.component';
     ProductsComponent // Facultatif, mais utile si vous voulez exporter le composant
   ]
 })
-export class ProductModule { }
+export class ProductModule {  
+  id: number;
+  name: string;
+  image: string;
+  categoryId: number;
+  description: string;
+  price: number;
+  brand: string;
+  promotion: number;
+}

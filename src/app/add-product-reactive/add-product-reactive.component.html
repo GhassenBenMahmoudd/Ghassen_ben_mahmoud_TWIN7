@@ -1,0 +1,13 @@
+<form [formGroup] = "myForm">
+    name:<input formControlName="name"><br>
+    <div *ngIf ="myForm.get('name').errors"></div><!--.errors= .invalid-->
+    <div *ngIf ="myForm.get('name').errors?.['required']">Name obligatoire</div>
+    <div *ngIf ="myForm.get('name').errors?.['minlength']">Minimum 5 caractére</div>
+
+    description: <textarea formControlName="description"></textarea><br>
+    price: <input type="number" formControlName="price"><br>
+    <button >Save</button>
+</form> 
+
+
+<a routerLink="/add-product">Add Product</a>
